@@ -15,14 +15,17 @@ import { Label } from "../components/ui/label";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN_MUTATION } from "../graphql/mutations";
+import { useRouter } from "next/navigation";
+import { useAuthStore } from "../store/ZustandStore";
 
 export const description =
   "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account.";
 
 export default function Login() {
-  // const router = useRouter();
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setTokens } = useAuthStore();
 
   const [login, { loading, error }] = useMutation(LOGIN_MUTATION);
 
@@ -30,15 +33,15 @@ export default function Login() {
     event.preventDefault();
 
     try {
-      const { data } = await login({
-        variables: { email, password },
-      });
+      const { data } = await login();
 
       if (data) {
-        localStorage.setItem("accessToken", data.login.accessToken);
-        localStorage.setItem("refreshToken", data.login.refreshToken);
+        localStorage.setItem("accessToken", data.login.access_token);
+        localStorage.setItem("refreshToken", data.login.refresh_token);
 
-        // router.push("/my-info");
+        setTokens(data.login.access_token, data.login.refresh_token);
+
+        router.push("/my-info");
       }
     } catch (e) {
       console.error("Login error:", e);
@@ -85,9 +88,12 @@ export default function Login() {
               }
             />
           </div>
-          <Button type="submit" className="w-full" onClick={handleLogin}>
-            Login
-            {loading ? "Signing In..." : "Sign In"}
+          <Button
+            type="submit"
+            className="w-full bg-white text-black hover:text-white"
+            onClick={handleLogin}
+          >
+            {loading ? "Signing In..." : "Login"}
           </Button>
           {error && <p className="text-red-500">{error.message}</p>}
           <Button variant="outline" className="w-full">
