@@ -5,6 +5,10 @@ import { useAuthStore } from "../store/ZustandStore";
 import { MY_PROFILE_QUERY } from "../graphql/queries";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
+import TimeOffSection from "../components/TimeOffSection";
+import HistoryTable from "../components/HistoryTable";
 
 const MyInfoPage = () => {
   const router = useRouter();
@@ -31,13 +35,24 @@ const MyInfoPage = () => {
   return (
     <div>
       <header>
-        <div>
+        {/* <div>
           <img src={avatar} alt={name} />
           <h1>{name}</h1>
         </div>
-        <button onClick={logout}>Logout</button>
+        <button onClick={logout}>Logout</button> */}
       </header>
-      <main>{/* Остальная информация профиля */}</main>
+      <main>
+        <div className="flex">
+          <div className="flex-1">
+            <Navbar avatar={avatar} />
+            <Sidebar />
+            <main className="p-6">
+              <TimeOffSection />
+              <HistoryTable />
+            </main>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
