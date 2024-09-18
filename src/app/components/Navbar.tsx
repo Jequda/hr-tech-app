@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Navbar = ({ avatar }) => {
+const Navbar = ({ avatar }: { avatar: string }) => {
   return (
     <nav className="bg-white flex gap-[60px] items-center pt-[32px] pl-[24px] pr-[24px] pb-[8px] justify-between h-[86px]">
       <Image

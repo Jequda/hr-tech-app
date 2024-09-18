@@ -1,21 +1,19 @@
 import Image from "next/image";
 import React from "react";
 
-const Dashboard = ({ avatar, name }) => {
+const Dashboard = ({ avatar, name }: { avatar: string; name: string }) => {
   return (
     <>
-      <div className="bg-blue-100 flex pl-[109px] pr-[72px] pt-[67px] items-center ">
-        <div className="flex items-center mt-[-53px]">
-          <Image
-            src={avatar}
-            alt="avatar"
-            className="rounded-full mr-[24px] h-[150px]"
-            width={150}
-            height={150}
-          />
-        </div>
+      <div className="bg-blue-100 flex pl-[109px] pr-[72px] pt-[67px] items-center justify-between">
+        <Image
+          src={avatar}
+          alt="avatar"
+          className="rounded-full mr-[24px] z-10 w-[150px] h-[150px] mt-[-53px]"
+          width={150}
+          height={150}
+        />
 
-        <div className="ml-[63px] ">
+        <div className="ml-[63px] w-full">
           <div className="flex justify-between ">
             <h2 className="text-black text-[28px] font-semibold">{name}</h2>
             <div className="flex gap-[24px] items-center">

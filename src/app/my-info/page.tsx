@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import TimeOffSection from "../components/TimeOffSection";
-import HistoryTable from "../components/HistoryTable";
 import Dashboard from "../components/Dashboard";
 
 const MyInfoPage = () => {
@@ -33,7 +32,7 @@ const MyInfoPage = () => {
   const { name, avatar } = data.myProfile;
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen">
       <header>
         {/* <div>
           <img src={avatar} alt={name} />
@@ -42,15 +41,14 @@ const MyInfoPage = () => {
         <button onClick={logout}>Logout</button> */}
       </header>
       <main>
-        <div className="flex">
-          <div className="flex-1">
+        <div>
+          <div>
             <Navbar avatar={avatar} />
             <Dashboard avatar={avatar} name={name} />
-            <Sidebar avatar={avatar} name={name} />
-            <main className="p-6">
+            <div className="flex">
+              <Sidebar />
               <TimeOffSection />
-              <HistoryTable />
-            </main>
+            </div>
           </div>
         </div>
       </main>
