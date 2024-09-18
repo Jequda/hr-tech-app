@@ -70,7 +70,7 @@ const MyInfoPage = () => {
   const { name, avatar } = data.myProfile;
 
   return (
-    <div className="bg-gray-100 min-h-screen max-sm:w-max-[360px] max-sm:h-full overflow-x-hidden">
+    <div className="bg-gray-100 min-h-screen max-sm:w-max-[360px] max-sm:h-full">
       <main>
         <div>
           <div>
