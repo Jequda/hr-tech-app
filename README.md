@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# О проекте
 
-## Getting Started
+Реализовано приложение в тематике HR-tech, для просмотра информации о сотруднике.
+Приложение состоит из двух страниц - страница авторизации `login` и страница `my-info` с профилем сотрудника.
+Страница авторизации реализована с помощью адаптивного шаблона shadcn/ui.
+Авторизация реализована с помощью GraphQL мутации. Аутенфикация проходит через пару токенов access_token и refresh_token. После успешной авторизации, пользователь попадает на страницу `my-info`.
 
-First, run the development server:
+Реализован выход из системы, после нажатия "шестеренки" и выбора Logout в модальном окне. На страницу профиля можно попасть только авторизованному пользователю.
+Добавлен адаптивная верстка для мобильного телефона.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Запуск приложения локально
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Для локального запуска приложения необходимо выполнить ряд действий:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Открыть терминал
+2. Установить зависимости командой `npm i` и дождаться установки
+3. Запустить приложение командой `npm run dev`
+4. Перейти по локальному адресу из терминала http://localhost:3000
