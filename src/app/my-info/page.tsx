@@ -9,6 +9,7 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import TimeOffSection from "../components/TimeOffSection";
 import HistoryTable from "../components/HistoryTable";
+import Dashboard from "../components/Dashboard";
 
 const MyInfoPage = () => {
   const router = useRouter();
@@ -45,7 +46,8 @@ const MyInfoPage = () => {
         <div className="flex">
           <div className="flex-1">
             <Navbar avatar={avatar} />
-            <Sidebar />
+            <Dashboard avatar={avatar} name={name} />
+            <Sidebar avatar={avatar} name={name} />
             <main className="p-6">
               <TimeOffSection />
               <HistoryTable />
