@@ -7,7 +7,7 @@ const Navbar = ({ avatar }) => {
       <Image
         src="/HarmonyHR.svg"
         alt="logo"
-        className="mb-[14px]"
+        className="mb-[14px] w-auto h-auto"
         width={116}
         height={24}
       />
@@ -18,7 +18,7 @@ const Navbar = ({ avatar }) => {
         </a>
         <a
           href="#"
-          className="text-black pl-[16px] pr-[16px] pt-[16px] pb-full bg-blue-100 whitespace-nowrap rounded-tl-[10px] rounded-tr-[10px]"
+          className="text-black pl-[16px] pr-[16px] pt-[16px] pb-[21px] bg-blue-100 whitespace-nowrap rounded-tl-[10px] rounded-tr-[10px]"
         >
           My Info
         </a>

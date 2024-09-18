@@ -14,7 +14,6 @@ import Dashboard from "../components/Dashboard";
 const MyInfoPage = () => {
   const router = useRouter();
   const { accessToken, logout } = useAuthStore();
-  console.log(accessToken);
   const { data, loading, error } = useQuery(MY_PROFILE_QUERY, {
     context: {
       headers: {
@@ -34,7 +33,7 @@ const MyInfoPage = () => {
   const { name, avatar } = data.myProfile;
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <header>
         {/* <div>
           <img src={avatar} alt={name} />

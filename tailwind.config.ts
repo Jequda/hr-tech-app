@@ -63,5 +63,10 @@ const config: Config = {
     require("tailwindcss-animate"),
     require("tailwindcss-pseudo-elements"),
   ],
+  variants: {
+    extend: {
+      margin: ["before", "after"],
+    },
+  },
 };
 export default config;

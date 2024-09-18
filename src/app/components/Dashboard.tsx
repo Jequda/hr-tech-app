@@ -4,12 +4,12 @@ import React from "react";
 const Dashboard = ({ avatar, name }) => {
   return (
     <>
-      <div className="bg-blue-100 flex pl-[104px] pr-[72px] pt-[67px] items-center">
+      <div className="bg-blue-100 flex pl-[109px] pr-[72px] pt-[67px] items-center ">
         <div className="flex items-center mt-[-53px]">
           <Image
             src={avatar}
             alt="avatar"
-            className="rounded-full mr-[24px]"
+            className="rounded-full mr-[24px] h-[150px]"
             width={150}
             height={150}
           />
@@ -34,7 +34,7 @@ const Dashboard = ({ avatar, name }) => {
             </div>
           </div>
           <div className="flex w-full">
-            <nav className="flex gap-[16px]   py-[16px] ">
+            <nav className="flex gap-[16px]   pt-[16px] ">
               <a href="#" className="text-black p-[16px]">
                 Personal
               </a>
@@ -65,8 +65,11 @@ const Dashboard = ({ avatar, name }) => {
               <a href="#" className="text-black p-[16px]">
                 Assets
               </a>
-              <a href="#" className="text-black p-[16px]">
+              <a href="#" className="text-black p-[16px] flex gap-[16px]">
                 More
+                <div className="relative">
+                  <span className="after:content-[''] after:block after:w-[8px] after:h-[8px] after:border-solid after:border-r-2 after:border-b-2 after:border-black after:rotate-45"></span>
+                </div>
               </a>
             </nav>
           </div>
