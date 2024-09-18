@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const TimeOffSection = () => {
   return (
-    <div className="pl-[16px] pr-[17px] pt-[41px] bg-white ml-[25px] w-full mr-[71px]">
-      <div className="flex justify-between">
-        <h2 className="text-lg font-semibold text-[#204973] flex gap-3 items-center">
+    <div className="pl-[16px] pr-[17px] pt-[41px] bg-white ml-[25px] w-full mr-[71px] max-sm:ml-0">
+      <div className="flex justify-between ">
+        <h2 className="text-lg font-semibold text-[#204973] flex gap-3 items-center max-sm:hidden">
           <Image
             src="/timeoff.svg"
             alt="timeoff"
@@ -26,9 +26,9 @@ const TimeOffSection = () => {
         </div>
       </div>
       <hr className="border-t border-[#7C96B1] mt-3 border-[2px] " />
-      <div className="grid grid-cols-3 gap-12 mr-20 ml-20 mt-[25px] pb-6 ">
+      <div className="grid grid-cols-3 gap-12 mr-20 ml-20 mt-[25px] pb-6 max-sm:flex max-sm:ml-0 max-sm:gap-3">
         <div>
-          <div className="bg-[#F0F3F8] pr-4 pl-4 pt-3 pb-3  rounded-[8px]  flex-col text-center space-y-1">
+          <div className="bg-[#F0F3F8] pr-4 pl-4 pt-3 pb-3  rounded-[8px]  flex-col text-center space-y-1 max-sm:w-[264px]">
             <h3 className="font-semibold text-gray-700 text-xl">Sick</h3>
             <p className="text-3xl font-bold text-black flex gap-[10px] justify-center">
               <Image
@@ -48,7 +48,7 @@ const TimeOffSection = () => {
           </p>
         </div>
         <div>
-          <div className="bg-[#F0F3F8] pr-4 pl-4 pt-[26px] pb-[26px]  rounded-[8px]  flex-col text-center h-[138px] space-y-1">
+          <div className="bg-[#F0F3F8] pr-4 pl-4 pt-[26px] pb-[26px]  rounded-[8px]  flex-col text-center h-[138px] space-y-1 max-sm:w-[264px]">
             <h3 className="font-semibold text-gray-700 text-xl">
               Annual Leave{" "}
             </h3>

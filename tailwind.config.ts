@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "max-sm": { max: "360px" },
+      },
       colors: {
         stroke: "#7C96B1",
         background: "hsl(var(--background))",

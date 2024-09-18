@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <div className="flex-col gap-[48px] ml-[72px]   ">
+    <div className="flex-col gap-[48px] ml-[72px] max-sm:hidden  ">
       <div className="w-[225px] p-6 bg-white mt-[-30px] mb-[16px] rounded-[16px]">
         <div className="space-y-4 ">
           <div className="flex text-black gap-[8px]">
@@ -12,7 +12,7 @@ const Sidebar = () => {
               alt="telephone"
               width={16}
               height={16}
-              className="w-auto h-auto"
+              className="h-auto"
             />
             07911 654321
           </div>
